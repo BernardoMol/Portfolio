@@ -5,7 +5,7 @@ import { useAuth } from '../Contexts/AuthContext'; // <--- Garanta que esta linh
                                                   // (Provavelmente '../../contexts/AuthContext' se Login.tsx está em 'src/Paginas'
                                                   // e AuthContext.tsx está em 'src/contexts')
 import "./Login.css";
-
+import { apiFetch } from '../api'
 const Login: React.FC = () => {
   const navigate = useNavigate();
   const { login } = useAuth(); // <--- Garanta que esta linha está descomentada. Ela pega a função 'login' do seu AuthContext.
@@ -30,7 +30,8 @@ const Login: React.FC = () => {
 
     try {
       // Confirme que esta URL é a do seu backend
-      const response = await fetch('http://localhost:5197/AuthControler/login', {
+      const response = await apiFetch('/AuthControler/login', {
+      // const response = await fetch('http://localhost:5197/AuthControler/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
