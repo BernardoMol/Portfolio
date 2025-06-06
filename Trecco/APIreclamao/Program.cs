@@ -64,7 +64,7 @@ var app = builder.Build();
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(
-        Path.Combine(Directory.GetCurrentDirectory(), "imagens_perfis")),
+        Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "imagens_perfis")),
     RequestPath = "/imagens_perfis"
 });
 
