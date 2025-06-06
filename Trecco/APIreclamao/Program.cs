@@ -39,7 +39,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin",
-        builder => builder.WithOrigins("http://localhost:3000") // <<<<<< Substitua pela URL do seu frontend React
+        builder => builder.WithOrigins("http://localhost:3000", "https://trecco.vercel.app") // <<<<<< Substitua pela URL do seu frontend React
                           .AllowAnyHeader()
                           .AllowAnyMethod());
 });
