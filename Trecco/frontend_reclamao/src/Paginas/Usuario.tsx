@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Usuario.css";
+import { apiFetch } from "../api";
 
 const Usuario: React.FC = () => {
   const navigate = useNavigate();
@@ -22,7 +23,8 @@ const Usuario: React.FC = () => {
   // Função para buscar as reclamações do backend
   const fetchReclamacoesFromServer = async (authToken: string, usuarioId: number) => {
     try {
-      const response = await fetch(`http://localhost:5197/ControladorContexto/obterPorUsuario/${usuarioId}`, {
+      const response = await apiFetch(`/ControladorContexto/obterPorUsuario/${usuarioId}`, {
+      // const response = await fetch(`http://localhost:5197/ControladorContexto/obterPorUsuario/${usuarioId}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${authToken}`
@@ -64,7 +66,8 @@ const Usuario: React.FC = () => {
 
     try {
       // Usa o endpoint que você me passou: [HttpPut("upload-imagem-perfil/{usuarioId}")]
-      const response = await fetch(`http://localhost:5197/AuthControler/upload-imagem-perfil/${userData.usuarioId}`, {
+      const response = await apiFetch(`/AuthControler/upload-imagem-perfil/${userData.usuarioId}`, {
+      // const response = await fetch(`http://localhost:5197/AuthControler/upload-imagem-perfil/${userData.usuarioId}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${authToken}`,
@@ -203,7 +206,8 @@ const Usuario: React.FC = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:5197/ControladorContexto/CTX_deletar/id=${idReclamacao}`, {
+        const response = await apiFetch(`/ControladorContexto/CTX_deletar/id=${idReclamacao}`, {
+      // const response = await fetch(`http://localhost:5197/ControladorContexto/CTX_deletar/id=${idReclamacao}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${authToken}`
@@ -253,7 +257,8 @@ const Usuario: React.FC = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:5197/ControladorContexto/CTX_alterar/id=${idReclamacao}`, {
+      const response = await apiFetch(`/ControladorContexto/CTX_alterar/id=${idReclamacao}`, {
+      // const response = await fetch(`http://localhost:5197/ControladorContexto/CTX_alterar/id=${idReclamacao}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
