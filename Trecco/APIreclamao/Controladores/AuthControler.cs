@@ -62,6 +62,13 @@ namespace APIreclamao.Controladores
         }
 
 
+
+        [HttpOptions("login")]
+        public IActionResult OptionsLogin()
+        {
+            return Ok();
+        }
+
         // Endpoint de Login
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDTO request) // Recebe o DTO de login
