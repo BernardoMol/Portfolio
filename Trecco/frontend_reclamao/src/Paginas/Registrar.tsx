@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // <--- ADICIONE ESTA LINHA
 import './Registrar.css'; // Importa o arquivo CSS
+import { apiFetch } from '../api';
 
 const Registrar: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -33,7 +34,8 @@ const Registrar: React.FC = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:5197/AuthControler/register', {
+      const response = await apiFetch(`/AuthControler/register`, {
+      // const response = await fetch('http://localhost:5197/AuthControler/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

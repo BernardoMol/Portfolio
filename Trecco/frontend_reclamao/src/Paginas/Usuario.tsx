@@ -82,7 +82,8 @@ const Usuario: React.FC = () => {
         console.log("URL recebida do backend:", result.imageUrl);
         setSuccess("Imagem de perfil atualizada com sucesso!");
         // Atualiza a URL da imagem no estado do componente
-        setProfileImageUrl("http://localhost:5197"+result.imageUrl);
+        setProfileImageUrl("https://trecco.onrender.com"+result.imageUrl);
+        // setProfileImageUrl("http://localhost:5197"+result.imageUrl);
 
         // Atualiza o userData no localStorage com a nova URL da imagem
         const updatedUserData = { ...userData, imagemUsuario: result.imageUrl };
@@ -125,7 +126,8 @@ const Usuario: React.FC = () => {
 
           // **** ATUALIZADO: Carrega a imagem de perfil do usuário se ela existir ****
           if (parsedUserData.imagemUsuario) {
-            setProfileImageUrl("http://localhost:5197"+parsedUserData.imagemUsuario);
+            setProfileImageUrl("https://trecco.onrender.com"+parsedUserData.imagemUsuario);
+            // setProfileImageUrl("http://localhost:5197"+parsedUserData.imagemUsuario);
             console.log("a imagem existe")
           } else {
             // Se não houver imagem do usuário, volta para a padrão

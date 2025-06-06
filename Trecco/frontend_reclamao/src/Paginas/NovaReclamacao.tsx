@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./NovaReclamacao.css";
+import { apiFetch } from "../api";
 
 const NovaReclamacao: React.FC = () => {
   const [conteudo, setConteudo] = useState("");
@@ -63,7 +64,8 @@ const NovaReclamacao: React.FC = () => {
     const dataCriacaoReclamacao = new Date().toISOString(); // Pega a data e hora atual em formato ISO
 
     try {
-      const response = await fetch('http://localhost:5197/ControladorContexto/CTX_adicionar', {
+      const response = await apiFetch(`/ControladorContexto/CTX_adicionar`, {
+      // const response = await fetch('http://localhost:5197/ControladorContexto/CTX_adicionar', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
