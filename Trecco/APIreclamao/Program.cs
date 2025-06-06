@@ -56,25 +56,14 @@ builder.Services.AddCors(options =>
 
 // **3. Habilita o Serviço de Autorização**
 builder.Services.AddAuthorization();
-
 builder.Services.AddControllers();
 
 var app = builder.Build();
 
 app.UseRouting();
-
-// app.UseCors("AllowSpecificOrigin"); // <<<<<< Adicione esta linha antes de UseAuthentication/UseAuthorization
-app.UseCors("AllowAll");
-
-// **5. Middlewares de Requisição**
-// app.UseHttpsRedirection(); // Redireciona HTTP para HTTPS
-
-app.UseStaticFiles();
-
-
-
-app.UseAuthentication(); // Este middleware DEVE vir antes de UseAuthorization
-app.UseAuthorization();  // Este middleware DEVE vir depois de UseAuthentication
+app.UseCors("AllowAll"); // tem que estar antes do UseAuthentication!
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 
