@@ -9,6 +9,7 @@ using System; // Necessário para Console
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -60,8 +61,16 @@ builder.Services.AddControllers();
 
 var app = builder.Build();
 
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "imagens_perfis")),
+    RequestPath = "/imagens_perfis"
+});
+
 app.UseRouting();
 app.UseCors("AllowAll"); // tem que estar antes do UseAuthentication!
+
 app.UseAuthentication();
 app.UseAuthorization();
 
