@@ -36,14 +36,22 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 
 // ** Configuração do CORS **
+// builder.Services.AddCors(options =>
+// {
+//     options.AddPolicy("AllowSpecificOrigin",
+//         builder => builder.WithOrigins("http://localhost:3000", 
+//                                       "https://trecco.vercel.app", 
+//                                       "https://trecco-fdfdp35a3-bernardo-mols-projects.vercel.app") // <<<<<< Substitua pela URL do seu frontend React
+//                           .AllowAnyHeader()
+//                           .AllowAnyMethod());
+// });
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowSpecificOrigin",
-        builder => builder.WithOrigins("http://localhost:3000", "https://trecco.vercel.app", "https://trecco-fdfdp35a3-bernardo-mols-projects.vercel.app") // <<<<<< Substitua pela URL do seu frontend React
+    options.AddPolicy("AllowAll",
+        builder => builder.AllowAnyOrigin()
                           .AllowAnyHeader()
                           .AllowAnyMethod());
 });
-
 
 
 // **3. Habilita o Serviço de Autorização**
@@ -57,9 +65,10 @@ app.UseRouting();
 // **5. Middlewares de Requisição**
 // app.UseHttpsRedirection(); // Redireciona HTTP para HTTPS
 
-app.UseStaticFiles(); 
+app.UseStaticFiles();
 
-app.UseCors("AllowSpecificOrigin"); // <<<<<< Adicione esta linha antes de UseAuthentication/UseAuthorization
+// app.UseCors("AllowSpecificOrigin"); // <<<<<< Adicione esta linha antes de UseAuthentication/UseAuthorization
+app.UseCors("AllowAll");
 
 app.UseAuthentication(); // Este middleware DEVE vir antes de UseAuthorization
 app.UseAuthorization();  // Este middleware DEVE vir depois de UseAuthentication
