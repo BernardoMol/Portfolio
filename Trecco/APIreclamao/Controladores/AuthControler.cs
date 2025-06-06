@@ -158,9 +158,9 @@ namespace APIreclamao.Controladores
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-
         [HttpPut("upload-imagem-perfil/{usuarioId}")]
-        public async Task<IActionResult> UploadImagemPerfil(int UsuarioId, IFormFile imagem)
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> UploadImagemPerfil(int UsuarioId, [FromForm] IFormFile imagem)
         {
             if (imagem == null || imagem.Length == 0)
             {
@@ -171,23 +171,20 @@ namespace APIreclamao.Controladores
             {
                 return BadRequest("ID de usuário inválido.");
             }
+
             var usuario = await _context.Usuarios.FindAsync(UsuarioId);
             if (usuario == null)
             {
                 return NotFound($"Usuário com ID {UsuarioId} não encontrado.");
             }
-            
 
             var uploadFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "imagens_perfis");
 
-            // Cria o diretório se ele não existir
             if (!Directory.Exists(uploadFolder))
             {
                 Directory.CreateDirectory(uploadFolder);
             }
 
-            // Gera um nome de arquivo único para evitar colisões
-            // Por exemplo: "guid_originalfilename.ext"
             var nomeUnicoArquivo = $"{Guid.NewGuid()}_{Path.GetFileName(imagem.FileName)}";
             var caminhoCompletoArquivo = Path.Combine(uploadFolder, nomeUnicoArquivo);
 
@@ -198,24 +195,27 @@ namespace APIreclamao.Controladores
 
             var urlDaImagem = $"/imagens_perfis/{nomeUnicoArquivo}";
             usuario.ImagemUsuario = urlDaImagem;
-            
+
             try
             {
                 await _context.SaveChangesAsync();
-                return Ok(new { message = "Imagem de perfil atualizada com sucesso!", imageUrl = urlDaImagem });
+                return Ok(new
+                {
+                    message = "Imagem de perfil atualizada com sucesso!",
+                    imageUrl = urlDaImagem
+                });
             }
             catch (DbUpdateConcurrencyException)
             {
-                // Lidar com conflitos de concorrência se necessário
                 return StatusCode(500, "Erro de concorrência ao salvar a imagem.");
             }
             catch (Exception ex)
             {
-                // Logar o erro (recomendado para depuração em produção)
                 Console.WriteLine($"Erro ao salvar imagem no banco de dados: {ex.Message}");
                 return StatusCode(500, $"Erro interno ao salvar a imagem: {ex.Message}");
             }
         }
-        
+
+                
     }
 }
