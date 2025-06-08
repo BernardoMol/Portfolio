@@ -1,0 +1,161 @@
+<div class="detalhes-container">
+  <div class="detalhes-card">
+    <button class="back-button" (click)="voltarParaPaginaAnterior()">Voltar para Lista de Pedidos</button>
+
+    <ng-container *ngIf="!editando">
+      <button class="action-button edit-button" (click)="editarPedido()">Editar Pedido</button>
+    </ng-container>
+
+    <ng-container *ngIf="editando">
+      <button class="action-button save-button" (click)="salvarAlteracoes()">Salvar</button>
+      <button class="action-button cancel-button" (click)="editando = false">Cancelar</button>
+    </ng-container>
+
+    <button class="action-button delete-button" (click)="deletarPedido()">Deletar Pedido</button>
+
+    <div *ngIf="loading" class="loading-message">
+      <p>Carregando detalhes do pedido...</p>
+      <div class="spinner"></div>
+    </div>
+
+    <div *ngIf="error" class="error-message">
+      <p>Erro: {{ error }}</p>
+      <p>Por favor, tente novamente.</p>
+    </div>
+
+    <div *ngIf="!loading && !error && pedido" class="pedido-info">
+      <h2 class="pedido-title">Detalhes do Pedido ID: {{ pedido.id }}</h2>
+
+      <div>
+        <strong>Data do Pedido:</strong>
+        <span>{{ pedido.DataDoPedido | date:'shortDate' }}</span>
+      </div>
+
+      <div>
+        <strong>Data Prevista de Entrega:</strong>
+        <ng-container *ngIf="editando; else leituraDataEntrega">
+          <input type="date" [(ngModel)]="pedido.DataPrevistaEntrega" />
+        </ng-container>
+        <ng-template #leituraDataEntrega>
+          <span>{{ pedido.DataPrevistaEntrega | date:'shortDate' }}</span>
+        </ng-template>
+      </div>
+
+      <div>
+        <strong>Endereço de Entrega:</strong>
+        <span>{{ pedido.EnderecoEntrega }}</span>
+      </div>
+
+      <div>
+        <strong>Entregue:</strong>
+        <ng-container *ngIf="editando; else leituraEntregue">
+          <select [(ngModel)]="pedido.Entregue">
+            <option [ngValue]="true">Sim</option>
+            <option [ngValue]="false">Não</option>
+          </select>
+        </ng-container>
+        <ng-template #leituraEntregue>
+          <span>{{ pedido.Entregue ? 'Sim' : 'Não' }}</span>
+        </ng-template>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="cliente-info">
+        <h3>Informações do Cliente</h3>
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div style="flex-grow: 1;">
+            <p>
+              <strong>Nome:</strong>
+              <ng-container *ngIf="editando; else leituraNomeCliente">
+                <input [(ngModel)]="pedido.cliente.NomeCliente" />
+              </ng-container>
+              <ng-template #leituraNomeCliente>
+                <span>{{ pedido.cliente?.NomeCliente }}</span>
+              </ng-template>
+            </p>
+
+            <p>
+              <strong>Email:</strong>
+              <ng-container *ngIf="editando; else leituraEmailCliente">
+                <input [(ngModel)]="pedido.cliente.EmailCliente" />
+              </ng-container>
+              <ng-template #leituraEmailCliente>
+                <span>{{ pedido.cliente?.EmailCliente }}</span>
+              </ng-template>
+            </p>
+
+            <p>
+              <strong>Endereço:</strong>
+              <span>{{ pedido.cliente?.EnderecoCliente }}</span>
+            </p>
+          </div>
+          <div class="cliente-foto-circle">
+            <img [src]="pedido.cliente?.FotoCliente || 'assets/fotos/avatar.default.png'" alt="Foto do Cliente">
+          </div>
+        </div>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="loja-info">
+        <h3>Informações da Loja</h3>
+
+        <p>
+          <strong>Nome da Loja:</strong>
+          <span>{{ pedido.loja?.NomeLoja }}</span>
+        </p>
+
+        <p>
+          <strong>Endereço da Loja:</strong>
+          <span>{{ pedido.loja?.EnderecoLoja }}</span>
+        </p>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="produtos-info">
+        <h3>Produtos no Pedido</h3>
+        <ul *ngIf="pedido.produtos && pedido.produtos.length > 0">
+          <li *ngFor="let produto of pedido.produtos">
+            <strong>
+              <span>{{ produto.NomeProduto }}</span>
+            </strong>
+            -
+            Estoque:
+            <span>{{ produto.Estoque }}</span>
+            -
+            Valor:
+            <span>{{ produto.Valor | currency }}</span>
+          </li>
+        </ul>
+        <p *ngIf="!pedido.produtos || pedido.produtos.length === 0">Nenhum produto listado para este pedido.</p>
+      </div>
+    </div>
+
+    <div *ngIf="!loading && !error && !pedido" class="not-found-message">
+      <p>Pedido não encontrado.</p>
+      <button class="back-button" (click)="voltarParaPaginaAnterior()">Voltar</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .cliente-foto-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 20px;
+    border: 2px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cliente-foto-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>

@@ -1,0 +1,231 @@
+/* Estilos Gerais */
+.container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Header Banner (Faixa Superior) */
+.header-banner {
+  width: 100%;
+  background-color: #2c3e50;
+  padding: 20px 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  color: white;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portfolio-title {
+  font-size: 2.5em;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.profile-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-photo-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #34495e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 3px solid #ecf0f1;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #3498db;
+}
+
+/* Seção de Cartões (Projetos) */
+.projects-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.projects-section h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.icon-placeholder {
+  flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  background-color: #ecf0f1;
+  border-radius: 50%;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-icon {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-content h3 {
+  font-size: 1.5em;
+  color: #3498db;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.view-project-button {
+  display: inline-block;
+  background-color: #3498db;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.view-project-button:hover {
+  background-color: #2980b9;
+}
+
+/* Estilo para o botão "Criar Novo Pedido" */
+.create-pedido-button {
+  display: block;
+  margin: -10px auto 30px auto;
+  background-color: #28a745;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  max-width: 250px;
+  text-align: center;
+}
+
+.create-pedido-button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-area {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-links {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .profile-photo-placeholder {
+    width: 60px;
+    height: 60px;
+  }
+
+  .portfolio-title {
+    font-size: 2em;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .icon-placeholder {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .create-pedido-button {
+    width: 90%;
+    padding: 10px 20px;
+    margin: 10px auto 30px auto;
+  }
+}

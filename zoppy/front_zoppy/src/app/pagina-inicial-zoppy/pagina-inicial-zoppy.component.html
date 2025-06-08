@@ -1,0 +1,37 @@
+<div class="container">
+  <header class="header-banner">
+    <div class="header-content">
+      <h1 class="portfolio-title">Projeto ZOPPY</h1>
+      <div class="profile-area">
+        <div class="profile-photo-placeholder">
+          <img src="assets/fotos/minhaFoto.jpeg" alt="Sua Foto de Perfil" class="profile-photo">
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/bernardo-mol/" target="_blank" class="social-link linkedin">LinkedIn</a>
+          <a href="https://github.com/BernardoMol/Portfolio" target="_blank" class="social-link github">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="projects-section">
+    <h2>Lista de Pedidos</h2>
+    <button class="create-pedido-button" (click)="criarNovoPedido()">Novo Pedido</button> <div class="cards-container">
+      <div class="project-card" *ngFor="let pedido of pedidos">
+        <div class="icon-placeholder">
+          <img src="assets/fotos/iconePedido.png" alt="Ícone Pedido" class="card-icon">
+        </div>
+        <div class="card-content">
+          <h3>{{ pedido.id || 'Nome do Projeto Indefinido' }}</h3>
+          <p>{{ pedido.EnderecoEntrega || 'Descrição não disponível.' }}</p>
+          <a [routerLink]="['/detalhes-pedido', pedido.id]" class="view-project-button">Ver Detalhes</a>
+        </div>
+      </div>
+
+      <div *ngIf="pedidos.length === 0" class="no-pedidos-message">
+        <p>Nenhum pedido encontrado no momento.</p>
+      </div>
+
+    </div>
+  </section>
+</div>

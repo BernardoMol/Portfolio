@@ -1,0 +1,6 @@
+/* // só funfa aqui porque é aqui que manda no resto */
+body {
+  margin: 0; /* Remove a margem padrão do body */
+  padding: 0; /* Remove o padding padrão do body */
+  box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura */
+}
