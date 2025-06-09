@@ -10,6 +10,8 @@ instalei o angular com npm install -g @angular/cli
 depois utilizei o npm install
 iniciei com ng serve
 
+NEST 10.1.18, Angular 17
+
 A página inicial te dará duas opções, meu projeto desenvolvido para vocês (zoppy)
 e meu projeto desenvolvido em asp.net, o trecco.
 Seu front esta hospedado no vercel, sua api no render e seu banco no Railway.
