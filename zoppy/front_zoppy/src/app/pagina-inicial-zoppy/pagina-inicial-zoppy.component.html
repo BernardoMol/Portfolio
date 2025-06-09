@@ -14,24 +14,32 @@
     </div>
   </header>
 
-  <section class="projects-section">
+  <section class="pedidos-section">
     <h2>Lista de Pedidos</h2>
-    <button class="create-pedido-button" (click)="criarNovoPedido()">Novo Pedido</button> <div class="cards-container">
-      <div class="project-card" *ngFor="let pedido of pedidos">
+    <button class="create-pedido-button" (click)="criarNovoPedido()">Novo Pedido</button>
+    
+    <div class="cards-container">
+      <div class="pedidos-card" *ngFor="let pedido of pedidos">
         <div class="icon-placeholder">
           <img src="assets/fotos/iconePedido.png" alt="Ícone Pedido" class="card-icon">
         </div>
+
         <div class="card-content">
-          <h3>{{ pedido.id || 'Nome do Projeto Indefinido' }}</h3>
-          <p>{{ pedido.EnderecoEntrega || 'Descrição não disponível.' }}</p>
-          <a [routerLink]="['/detalhes-pedido', pedido.id]" class="view-project-button">Ver Detalhes</a>
+          <div class="card-header">
+            <h3 class="idPedido">Pedido ID: {{ pedido.id || 'Nome do Projeto Indefinido' }}</h3>
+            <h3 class="dataPedido">Data: {{ pedido.DataDoPedido | date:'dd/MM/yyyy' || 'Nome do Projeto Indefinido' }}</h3>
+          </div>
+          <p>Cliente: {{ pedido.cliente.NomeCliente || 'Descrição não disponível.' }}</p>
+          <p>Loja: {{ pedido.loja.NomeLoja || 'Descrição não disponível.' }}</p>
+          <p>Endereço de entrega: {{ pedido.EnderecoEntrega || 'Descrição não disponível.' }}</p>
+          <a [routerLink]="['/detalhes-pedido', pedido.id]" class="view-pedidos-button">Ver Detalhes</a>
         </div>
       </div>
 
       <div *ngIf="pedidos.length === 0" class="no-pedidos-message">
         <p>Nenhum pedido encontrado no momento.</p>
       </div>
-
     </div>
   </section>
+
 </div>

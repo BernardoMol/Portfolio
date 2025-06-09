@@ -43,17 +43,22 @@
         <input type="date" [(ngModel)]="novoPedido.DataPrevistaEntrega" />
       </div>
 
-      <div>
+      <!-- <div>
         <strong>Endereço de Entrega:</strong>
         <input [(ngModel)]="novoPedido.EnderecoEntrega" />
-      </div>
+      </div> -->
 
-      <div>
+      <!-- <div>
         <strong>Entregue:</strong>
         <select [(ngModel)]="novoPedido.Entregue">
           <option [ngValue]="true">Sim</option>
           <option [ngValue]="false">Não</option>
         </select>
+      </div> -->
+
+      <div>
+        <strong>Entregue: </strong>
+        <span>{{ novoPedido.Entregue ? 'Sim' : 'Não' }}</span>
       </div>
 
       <div class="section-divider"></div>

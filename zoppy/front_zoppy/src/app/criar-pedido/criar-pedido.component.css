@@ -171,6 +171,7 @@ select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    gap: 15px;
 }
 
 input[readonly] {
@@ -260,6 +261,7 @@ input[readonly] {
         margin-left: 0;
         width: 100%;
     }
+    
 }
 
 @media (max-width: 480px) {

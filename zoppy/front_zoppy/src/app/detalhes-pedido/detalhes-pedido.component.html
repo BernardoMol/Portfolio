@@ -28,7 +28,7 @@
 
       <div>
         <strong>Data do Pedido:</strong>
-        <span>{{ pedido.DataDoPedido | date:'shortDate' }}</span>
+        <span>{{ pedido.DataDoPedido | date:'dd/MM/yyyy' }}</span>
       </div>
 
       <div>
@@ -37,7 +37,7 @@
           <input type="date" [(ngModel)]="pedido.DataPrevistaEntrega" />
         </ng-container>
         <ng-template #leituraDataEntrega>
-          <span>{{ pedido.DataPrevistaEntrega | date:'shortDate' }}</span>
+          <span>{{ pedido.DataPrevistaEntrega | date:'dd/MM/yyyy' }}</span>
         </ng-template>
       </div>
 
