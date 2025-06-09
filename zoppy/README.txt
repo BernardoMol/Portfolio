@@ -10,7 +10,8 @@ instalei o angular com npm install -g @angular/cli
 depois utilizei o npm install
 iniciei com ng serve
 
-NEST 10.1.18, Angular 17
+NEST 10.1.18, Angular 19
+porta 4200 para o front e 3000 para o back
 
 A página inicial te dará duas opções, meu projeto desenvolvido para vocês (zoppy)
 e meu projeto desenvolvido em asp.net, o trecco.

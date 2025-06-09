@@ -6,17 +6,17 @@ import { CommonModule } from '@angular/common';
 import { Pedido } from '../interfaces/interface.pedido';
 
 import { DetalhesPedido } from '../services/detalhes.pedido'; 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'
 import { DeletarPedido } from '../services/deletar.pedido';
 import { AtualizarPedido } from '../services/atualizarPedido';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-detalhes-pedido',
-  standalone: true,
-  imports: [CommonModule, RouterModule, HttpClientModule, FormsModule],
-  templateUrl: './detalhes-pedido.component.html',
-  styleUrl: './detalhes-pedido.component.css'
+    selector: 'app-detalhes-pedido',
+    standalone: true,
+    imports: [CommonModule, RouterModule, HttpClientModule, FormsModule],
+    templateUrl: './detalhes-pedido.component.html',
+    styleUrl: './detalhes-pedido.component.css'
 })
 export class DetalhesPedidoComponent implements OnInit { // <-- Implementa OnInit
 

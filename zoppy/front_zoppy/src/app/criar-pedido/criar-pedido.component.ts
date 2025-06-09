@@ -12,11 +12,10 @@ import { switchMap } from 'rxjs/operators';
 import { CriarPedidoDto } from '../interfaces/interface.criar.pedido.dto';
 
 @Component({
-  selector: 'app-criar-pedido',
-  standalone: true,
-  imports: [CommonModule, RouterModule, HttpClientModule, FormsModule],
-  templateUrl: './criar-pedido.component.html',
-  styleUrl: './criar-pedido.component.css'
+    selector: 'app-criar-pedido',
+    imports: [CommonModule, RouterModule, HttpClientModule, FormsModule],
+    templateUrl: './criar-pedido.component.html',
+    styleUrl: './criar-pedido.component.css'
 })
 export class CriarPedidoComponent implements OnInit {
 

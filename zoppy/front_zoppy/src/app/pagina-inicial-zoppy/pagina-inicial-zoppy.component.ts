@@ -6,11 +6,10 @@ import { Pedido } from '../interfaces/interface.pedido';
 import { PedidosService } from '../services/pedidos.service';
 
 @Component({
-  selector: 'app-pagina-inicial-zoppy',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './pagina-inicial-zoppy.component.html',
-  styleUrl: './pagina-inicial-zoppy.component.css'
+    selector: 'app-pagina-inicial-zoppy',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './pagina-inicial-zoppy.component.html',
+    styleUrl: './pagina-inicial-zoppy.component.css'
 })
 export class PaginaInicialZoppyComponent {
     

@@ -27,7 +27,7 @@
         <div class="card-content">
           <div class="card-header">
             <h3 class="idPedido">Pedido ID: {{ pedido.id || 'Nome do Projeto Indefinido' }}</h3>
-            <h3 class="dataPedido">Data: {{ pedido.DataDoPedido | date:'dd/MM/yyyy' || 'Nome do Projeto Indefinido' }}</h3>
+            <h3 class="dataPedido">Data: {{ pedido.DataDoPedido | date:'dd/MM/yyyy' }}</h3>
           </div>
           <p>Cliente: {{ pedido.cliente.NomeCliente || 'Descrição não disponível.' }}</p>
           <p>Loja: {{ pedido.loja.NomeLoja || 'Descrição não disponível.' }}</p>

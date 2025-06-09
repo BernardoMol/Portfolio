@@ -3,11 +3,10 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common'; 
 
 @Component({
-  selector: 'app-pagina-inicial',
-  standalone: true,
-  imports: [CommonModule], 
-  templateUrl: './pagina-inicial.component.html',
-  styleUrl: './pagina-inicial.component.css'
+    selector: 'app-pagina-inicial',
+    imports: [CommonModule],
+    templateUrl: './pagina-inicial.component.html',
+    styleUrl: './pagina-inicial.component.css'
 })
 
 export class PaginaInicialComponent {
