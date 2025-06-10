@@ -160,7 +160,7 @@ namespace APIreclamao.Controladores
 
         [HttpPut("upload-imagem-perfil/{usuarioId}")]
         [Consumes("multipart/form-data")]
-        public async Task<IActionResult> UploadImagemPerfil(int UsuarioId, [FromForm] IFormFile imagem)
+        public async Task<IActionResult> UploadImagemPerfil(string UsuarioId, [FromForm] IFormFile imagem)
         {
             if (imagem == null || imagem.Length == 0)
             {

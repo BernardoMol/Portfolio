@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZXgEvlBKIS5pXyO1/PRgarE763AcG2O+1Q33+DnELrY=",
+  "Hash": "Q7TRh/Ads2p3NzO7w3XVIzp6jBWaKeccP3zsxqp5ikQ=",
   "Source": "APIreclamao",
   "BasePath": "_content/APIreclamao",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "APIreclamao\\wwwroot",
       "Source": "APIreclamao",
-      "ContentRoot": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\",
       "BasePath": "_content/APIreclamao",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\imagens_perfis\\3df16d7b-536b-4d26-b3ce-2bf2b70d735d_WhatsApp_Image_2025-06-05_at_20.57.30.jpeg",
+      "Identity": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\imagens_perfis\\3df16d7b-536b-4d26-b3ce-2bf2b70d735d_WhatsApp_Image_2025-06-05_at_20.57.30.jpeg",
       "SourceId": "APIreclamao",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\",
       "BasePath": "_content/APIreclamao",
       "RelativePath": "imagens_perfis/3df16d7b-536b-4d26-b3ce-2bf2b70d735d_WhatsApp_Image_2025-06-05_at_20.57.30#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -38,10 +38,10 @@
       "OriginalItemSpec": "wwwroot\\imagens_perfis\\3df16d7b-536b-4d26-b3ce-2bf2b70d735d_WhatsApp_Image_2025-06-05_at_20.57.30.jpeg"
     },
     {
-      "Identity": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\imagens_perfis\\f215a236-1f50-4c2e-aace-39c7376bf6cd_WhatsApp_Image_2025-06-05_at_20.57.30.jpeg",
+      "Identity": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\imagens_perfis\\f215a236-1f50-4c2e-aace-39c7376bf6cd_WhatsApp_Image_2025-06-05_at_20.57.30.jpeg",
       "SourceId": "APIreclamao",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\",
       "BasePath": "_content/APIreclamao",
       "RelativePath": "imagens_perfis/f215a236-1f50-4c2e-aace-39c7376bf6cd_WhatsApp_Image_2025-06-05_at_20.57.30#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -62,7 +62,7 @@
   "Endpoints": [
     {
       "Route": "imagens_perfis/3df16d7b-536b-4d26-b3ce-2bf2b70d735d_WhatsApp_Image_2025-06-05_at_20.57.30.5kkfh4yomh.jpeg",
-      "AssetFile": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\imagens_perfis\\3df16d7b-536b-4d26-b3ce-2bf2b70d735d_WhatsApp_Image_2025-06-05_at_20.57.30.jpeg",
+      "AssetFile": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\imagens_perfis\\3df16d7b-536b-4d26-b3ce-2bf2b70d735d_WhatsApp_Image_2025-06-05_at_20.57.30.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -107,7 +107,7 @@
     },
     {
       "Route": "imagens_perfis/3df16d7b-536b-4d26-b3ce-2bf2b70d735d_WhatsApp_Image_2025-06-05_at_20.57.30.jpeg",
-      "AssetFile": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\imagens_perfis\\3df16d7b-536b-4d26-b3ce-2bf2b70d735d_WhatsApp_Image_2025-06-05_at_20.57.30.jpeg",
+      "AssetFile": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\imagens_perfis\\3df16d7b-536b-4d26-b3ce-2bf2b70d735d_WhatsApp_Image_2025-06-05_at_20.57.30.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -144,7 +144,7 @@
     },
     {
       "Route": "imagens_perfis/f215a236-1f50-4c2e-aace-39c7376bf6cd_WhatsApp_Image_2025-06-05_at_20.57.30.5kkfh4yomh.jpeg",
-      "AssetFile": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\imagens_perfis\\f215a236-1f50-4c2e-aace-39c7376bf6cd_WhatsApp_Image_2025-06-05_at_20.57.30.jpeg",
+      "AssetFile": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\imagens_perfis\\f215a236-1f50-4c2e-aace-39c7376bf6cd_WhatsApp_Image_2025-06-05_at_20.57.30.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -189,7 +189,7 @@
     },
     {
       "Route": "imagens_perfis/f215a236-1f50-4c2e-aace-39c7376bf6cd_WhatsApp_Image_2025-06-05_at_20.57.30.jpeg",
-      "AssetFile": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\imagens_perfis\\f215a236-1f50-4c2e-aace-39c7376bf6cd_WhatsApp_Image_2025-06-05_at_20.57.30.jpeg",
+      "AssetFile": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\APIreclamao\\wwwroot\\imagens_perfis\\f215a236-1f50-4c2e-aace-39c7376bf6cd_WhatsApp_Image_2025-06-05_at_20.57.30.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {

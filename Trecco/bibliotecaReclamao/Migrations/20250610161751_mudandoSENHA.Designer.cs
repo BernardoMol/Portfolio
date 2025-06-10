@@ -12,8 +12,8 @@ using bibliotecaReclamao.Banco.Conexao;
 namespace bibliotecaReclamao.Migrations
 {
     [DbContext(typeof(ConexaoContexto))]
-    [Migration("20250610143533_removendoCOLUNAANTIGA")]
-    partial class removendoCOLUNAANTIGA
+    [Migration("20250610161751_mudandoSENHA")]
+    partial class mudandoSENHA
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -71,8 +71,8 @@ namespace bibliotecaReclamao.Migrations
 
                     b.Property<string>("SenhaUsuario")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("UsuarioId");
 

@@ -47,3 +47,4 @@ C:\Users\Mol\Documents\GitHub\Portfolio\Trecco\bibliotecaReclamao\obj\Debug\net9
 C:\Users\Mol\Documents\GitHub\Portfolio\Trecco\bibliotecaReclamao\obj\Debug\net9.0\refint\bibliotecaReclamao.dll
 C:\Users\Mol\Documents\GitHub\Portfolio\Trecco\bibliotecaReclamao\obj\Debug\net9.0\bibliotecaReclamao.pdb
 C:\Users\Mol\Documents\GitHub\Portfolio\Trecco\bibliotecaReclamao\obj\Debug\net9.0\ref\bibliotecaReclamao.dll
+C:\Users\Mol\Documents\GitHub\Portfolio\Portfolio\Trecco\bibliotecaReclamao\obj\Debug\net9.0\bibliotecaReclamao.sourcelink.json

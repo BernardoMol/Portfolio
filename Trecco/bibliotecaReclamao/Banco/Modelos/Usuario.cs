@@ -35,7 +35,7 @@ namespace bibliotecaReclamao.Banco.Modelos
 
 
         [Required] // Garante que a SenhaUsuario não seja nula
-        [StringLength(20, MinimumLength = 6, ErrorMessage = "A Senha deve ter entre 6 e 20 caracteres.")] // Exemplo de MinimumLength
+        [StringLength(255, MinimumLength = 6, ErrorMessage = "A Senha deve ter entre 6 e 20 caracteres.")] // Exemplo de MinimumLength
         public string SenhaUsuario { get; set; }
 
 

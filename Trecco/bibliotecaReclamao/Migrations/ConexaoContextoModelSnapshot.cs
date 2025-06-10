@@ -68,8 +68,8 @@ namespace bibliotecaReclamao.Migrations
 
                     b.Property<string>("SenhaUsuario")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("varchar(20)");
+                        .HasMaxLength(255)
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("UsuarioId");
 
