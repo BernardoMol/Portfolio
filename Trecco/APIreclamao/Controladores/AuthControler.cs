@@ -167,11 +167,6 @@ namespace APIreclamao.Controladores
                 return BadRequest("Nenhuma imagem enviada.");
             }
 
-            if (UsuarioId <= 0)
-            {
-                return BadRequest("ID de usuário inválido.");
-            }
-
             var usuario = await _context.Usuarios.FindAsync(UsuarioId);
             if (usuario == null)
             {
