@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\APIreclamao\\APIreclamao.csproj": {}
+    "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\APIreclamao\\APIreclamao.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\APIreclamao\\APIreclamao.csproj": {
+    "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\APIreclamao\\APIreclamao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\APIreclamao\\APIreclamao.csproj",
+        "projectUniqueName": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\APIreclamao\\APIreclamao.csproj",
         "projectName": "APIreclamao",
-        "projectPath": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\APIreclamao\\APIreclamao.csproj",
+        "projectPath": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\APIreclamao\\APIreclamao.csproj",
         "packagesPath": "C:\\Users\\Mol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\APIreclamao\\obj\\",
+        "outputPath": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\APIreclamao\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\bibliotecaReclamao\\bibliotecaReclamao.csproj": {
-                "projectPath": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\bibliotecaReclamao\\bibliotecaReclamao.csproj"
+              "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\bibliotecaReclamao\\bibliotecaReclamao.csproj": {
+                "projectPath": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\bibliotecaReclamao\\bibliotecaReclamao.csproj"
               }
             }
           }
@@ -110,14 +110,14 @@
         }
       }
     },
-    "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\bibliotecaReclamao\\bibliotecaReclamao.csproj": {
+    "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\bibliotecaReclamao\\bibliotecaReclamao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\bibliotecaReclamao\\bibliotecaReclamao.csproj",
+        "projectUniqueName": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\bibliotecaReclamao\\bibliotecaReclamao.csproj",
         "projectName": "bibliotecaReclamao",
-        "projectPath": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\bibliotecaReclamao\\bibliotecaReclamao.csproj",
+        "projectPath": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\bibliotecaReclamao\\bibliotecaReclamao.csproj",
         "packagesPath": "C:\\Users\\Mol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\bibliotecaReclamao\\obj\\",
+        "outputPath": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\bibliotecaReclamao\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

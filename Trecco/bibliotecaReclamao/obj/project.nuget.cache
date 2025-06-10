@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "by9wJr893Io=",
+  "dgSpecHash": "4y4JzZdfgkY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Trecco\\bibliotecaReclamao\\bibliotecaReclamao.csproj",
+  "projectFilePath": "C:\\Users\\Mol\\Documents\\GitHub\\Portfolio\\Portfolio\\Trecco\\bibliotecaReclamao\\bibliotecaReclamao.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mol\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
     "C:\\Users\\Mol\\.nuget\\packages\\google.protobuf\\3.30.0\\google.protobuf.3.30.0.nupkg.sha512",
