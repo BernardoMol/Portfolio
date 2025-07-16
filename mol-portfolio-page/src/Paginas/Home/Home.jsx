@@ -22,7 +22,7 @@ import fotoLaravel from "../../Componentes/Card/assetsCard/laravel.jpg";
 import logoLaravel from "../../Componentes/Card/assetsCard/laravel.svg";
 
 import fotoAlura from "../../Componentes/Card/assetsCard/alura.jpeg";
-
+// comentario
 export default function Home() {
   const [count, setCount] = useState(0)
 
