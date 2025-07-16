@@ -1,6 +1,6 @@
 
 import './Certificados.css'
-import Header from '../../Componentes/Header/header'
+import Header from '../../Componentes/Header/Header'
 
 export default function Certificados() {
   return (

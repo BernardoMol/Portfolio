@@ -1,6 +1,6 @@
 
 import './Curriculo.css'
-import Header from '../../Componentes/Header/header'
+import Header from '../../Componentes/Header/Header'
 
 
 export default function Curriculo() {
