@@ -1,7 +1,7 @@
 
 import './App.css'
 import Card from '../../Componentes/Card/Card'
-import Header from '../../Componentes/Header/header'
+import Header from '../../Componentes/Header/Header'
 import { useState } from 'react'
 
 import fotoTrecco from "../../Componentes/Card/assetsCard/Trecco.png";
