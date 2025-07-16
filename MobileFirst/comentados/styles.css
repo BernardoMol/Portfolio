@@ -1,0 +1,271 @@
+/* Estilização da seção do banner principal */
+.banner {
+    background: var(--azul-degrade); /* Fundo com gradiente azul */
+    color: var(--branco); /* Texto branco */
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 2.5em 2em; /* Espaçamento interno no topo/baixo e nas laterais */
+}
+
+.banner__titulo {
+    font-size: 18px; /* Tamanho da fonte do título */
+    font-weight: 700; /* Negrito */
+    margin: 1em; /* Margem ao redor do título */
+}
+
+.banner__texto {
+    font-weight: 500; /* Meio negrito */
+    margin: 1em; /* Espaçamento vertical */
+}
+
+.banner__pesquisa {
+    background-color: transparent; /* Fundo transparente */
+    border: 1px solid var(--branco); /* Borda branca */
+    color: var(--branco); /* Texto branco */
+    border-radius: 24px; /* Bordas arredondadas */
+    padding: 1em; /* Espaçamento interno */
+    width: 100%; /* Ocupa toda a largura disponível */
+}
+
+.banner__pesquisa::placeholder {
+    font-family: var(--fonte-principal); /* Fonte definida na raiz */
+    font-size: 14px; /* Tamanho do placeholder */
+    font-weight: 400; /* Peso da fonte normal */
+    text-align: center; /* Centraliza o texto no campo */
+    color: var(--branco); /* Cor branca para o placeholder */
+    background: url("../img/Lupa.svg") no-repeat; /* Ícone de lupa */
+    background-position: 1em; /* Posição do ícone */
+}
+
+/* Título da seção de carrossel */
+.carrossel__titulo {
+    color: var(--laranja); /* Texto laranja */
+    background-color: var(--branco); /* Fundo branco */
+    text-align: center; /* Centraliza o texto */
+    text-transform: uppercase; /* Letras maiúsculas */
+    font-size: 18px;
+    font-weight: 700;
+    padding: 1em 0 0.5em 0; /* Espaçamento superior e inferior */
+}
+
+/* Imagens do carrossel */
+.swiper-slide img {
+    width: 100%; /* Ocupa toda a largura do slide */
+}
+
+/* Botões de navegação ocultos (mobile first) */
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+}
+
+/* Paginação do carrossel */
+.swiper-pagination {
+    position: initial;
+    margin: 0.5em 0;
+}
+
+/* Seção do card com descrição do livro */
+.card__descrição {
+    display: flex; /* Layout em linha */
+    justify-content: space-between; /* Espaço entre os elementos */
+    margin-bottom: 0.5em;
+}
+
+.card__botões {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botões {
+    display: flex;
+}
+
+.card {
+    background: var(--branco);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /* Sombra */
+    border-radius: 10px; /* Bordas arredondadas */
+    margin: 1em; /* Espaçamento externo */
+    padding: 1em; /* Espaçamento interno */
+}
+
+/* Estilização textual do card */
+.descrição__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.descrição__titulo-livro {
+    color: var(--azul);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0.5em 0;
+}
+
+.descrição__texto {
+    font-size: 14px;
+}
+
+/* Ícones de botões no card */
+.botões__item {
+    margin: 0 0.5em;
+}
+
+/* Link "saiba mais" estilizado como botão */
+.botoes__ancora {
+    background-color: var(--laranja);
+    padding: 1em 2.2em;
+    color: var(--branco);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Seção de contato com email */
+.contato {
+    background-color: var(--branco);
+    padding: 1em;
+}
+
+/* Título e texto com gradiente aplicado no texto */
+.contato__titulo,
+.contato__texto {
+    background: var(--azul-degrade); /* Gradiente no fundo */
+    -webkit-background-clip: text; /* Aplica gradiente apenas no texto */
+    -webkit-text-fill-color: transparent; /* Torna o fundo visível pelo texto */
+    background-clip: text;
+}
+
+.contato__titulo {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.contato__texto {
+    font-weight: 300;
+    margin: 1em 0;
+}
+
+/* Campo de email */
+.contato__email {
+    padding: 1em;
+    border: 1px solid var(--azul); /* Corrigido de "splid" para "solid" */
+    border-radius: 24px;
+    width: 90%;
+    color: var(--azul);
+}
+
+.contato__email::placeholder {
+    font-family: var(--fonte-principal);
+    color: var(--azul);
+    background: url("../img/Email.svg") no-repeat;
+    padding-left: 2em;
+}
+
+/* Ícone do menu hamburguer */
+.cabeçalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Cabeçalho principal da página */
+.cabeçalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* Container que agrupa elementos no cabeçalho */
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+/* Menu dropdown escondido inicialmente */
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+/* Exibe o menu quando o checkbox está marcado */
+.container__botao:checked ~ .lista-menu {
+    display: block;
+}
+
+/* Título e itens do menu lateral */
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo {
+    color: var(--laranja);
+}
+
+/* Links do menu com efeito de gradiente */
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+/* Esconde o checkbox do menu */
+.container__botao {
+    display: none;
+}
+
+/* Linha horizontal entre seções */
+hr {
+    margin: 0;
+}
+
+/* Rodapé da página */
+.rodapé {
+    background-color: var(--branco);
+    padding: 1em;
+}
+
+/* Seção de tópicos recentes */
+.tópicos {
+    background: var(--azul-degrade);
+    text-align: center;
+    padding: 1em 0;
+}
+
+.tópicos__titulo {
+    color: var(--branco);
+    font-weight: 300;
+    margin-bottom: 1em;
+}
+
+.tópicos__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tópicos__item {
+    margin: 2em 0.5em;
+}
+
+.tópicos__link {
+    color: var(--branco);
+    padding: 1em;
+    background-color: var(--laranja);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+}

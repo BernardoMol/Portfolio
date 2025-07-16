@@ -1,0 +1,14 @@
+.mural__cards{
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: auto;
+
+    justify-content: center;
+    /* align-content: center; */
+    
+    margin: 2vh 12.5vw;
+    background-color: grey;
+}
