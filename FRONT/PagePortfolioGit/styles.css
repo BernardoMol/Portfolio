@@ -1,0 +1,36 @@
+
+@import url("styles/header.css");
+@import url("styles/principal.css");
+@import url("styles/footer.css");
+
+:root {
+    --cor-de-fundo: lightgray;
+    --branco: #FFFFFF;
+    --laranja: #EB9B00;
+    --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --azul: blue;    
+    --preto: black
+}
+
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    display: flex;
+    flex-direction: column; /* Empilha os itens verticalmente */
+    min-height: 100%;     /* Ocupa no mínimo 100% da altura da tela */
+    margin: 0;            /* Remove margens padrão */
+}
+
+/* 2. Faz o conteúdo principal crescer e empurrar o rodapé */
+main {
+    flex-grow: 1; 
+}
+

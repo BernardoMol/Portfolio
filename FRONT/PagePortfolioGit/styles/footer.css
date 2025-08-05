@@ -1,0 +1,19 @@
+.rodapé{
+    background-color: blue;
+    color: white;
+
+    display: flex;
+}
+
+.tags{
+    display: flex;
+    margin-left: auto;
+    gap: 1.5em;
+
+    padding: 0;
+    margin-top: 0;
+}
+
+.tags p {
+    margin: .2em;
+}
